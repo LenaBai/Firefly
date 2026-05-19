@@ -47,8 +47,8 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 		// 移动背景图片（支持单张或多张随机）
 		// mobile: "assets/images/MobileWallpaper/m1.avif",
 		mobile: [
-			"assets/images/Skirk2/skirk_B1.avif",
-			"assets/images/Skirk2/skirk_B2.avif",
+			"assets/images/Skirk2/skirk2_B1.avif",
+			"assets/images/Skirk2/skirk2_B2.avif",
 		],
 	},
 	// 横幅壁纸和全屏壁纸共享配置
@@ -62,17 +62,15 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			// 是否允许用户通过控制面板切换横幅标题显示
 			switchable: true,
 			// 主页横幅主标题
-			title: "Lovely firefly!",
+			title: "Lovely Skirk!",
 			// 主页横幅主标题字体大小
 			titleSize: "3.8rem",
 			// 主页横幅副标题
 			subtitle: [
-				"In Reddened Chrysalis, I Once Rest",
-				"From Shattered Sky, I Free Fall",
-				"Amidst Silenced Stars, I Deep Sleep",
-				"Upon Lighted Fyrefly, I Soon Gaze",
-				"From Undreamt Night, I Thence Shine",
-				"In Finalized Morrow, I Full Bloom",
+				"相信的心就是你的魔法",
+				"你想成为什么颜色",
+				"我的墓志铭是【未完待续】",
+				"人活着，总会遇到好事的",
 			],
 			// 主页横幅副标题字体大小
 			subtitleSize: "1.5rem",
@@ -86,7 +84,7 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 				// 删除速度（毫秒）
 				deleteSpeed: 50,
 				// 完全显示后的暂停时间（毫秒）
-				pauseTime: 2000,
+				pauseTime: 3000,
 			},
 		},
 		// 导航栏配置
