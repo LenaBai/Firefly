@@ -26,7 +26,7 @@ export const sponsorConfig: SponsorConfig = {
 			name: "支付宝",
 			icon: "fa7-brands:alipay",
 			// 收款码图片路径（需要放在 public 目录下）
-			qrCode: "/assets/images/sponsor/alipay.png",
+			qrCode: "/assets/images/sponsor/alipay2.png",
 			link: "",
 			description: "使用 支付宝 扫码赞助",
 			enabled: true,
@@ -34,7 +34,7 @@ export const sponsorConfig: SponsorConfig = {
 		{
 			name: "微信",
 			icon: "fa7-brands:weixin",
-			qrCode: "/assets/images/sponsor/wechat.png",
+			qrCode: "/assets/images/sponsor/wechat2.png",
 			link: "",
 			description: "使用 微信 扫码赞助",
 			enabled: true,
@@ -51,7 +51,7 @@ export const sponsorConfig: SponsorConfig = {
 			name: "爱发电",
 			icon: "simple-icons:afdian",
 			qrCode: "",
-			link: "https://ifdian.net/a/cuteleaf",
+			link: "https://www.ifdian.net/a/Lena_Bai",
 			description: "通过 爱发电 进行赞助",
 			enabled: true,
 		},
@@ -61,15 +61,15 @@ export const sponsorConfig: SponsorConfig = {
 	sponsors: [
 		// 示例：已实名赞助者
 		{
-			name: "夏叶",
-			amount: "¥50",
-			date: "2025-10-01",
+			name: "道九闲歌",
+			amount: "感谢支持",
+			date: "2026-05-19",
 		},
 
 		// 示例：匿名赞助者
 		{
 			name: "匿名用户",
-			amount: "¥20",
+			amount: "感谢支持",
 			date: "2025-10-01",
 		},
 	],

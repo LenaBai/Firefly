@@ -65,20 +65,20 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 		// 子菜单
 		children: [
 			{
-				name: "GitHub",
-				url: "https://github.com/CuteLeaf/Firefly",
+				name: "BiliBili",
+				url: "https://space.bilibili.com/1932855914?spm_id_from=333.1007.0.0",
 				external: true,
-				icon: "fa7-brands:github",
+				icon: "mingcute:bilibili-line",
 			},
 			{
-				name: "Gitee",
+				name: "123",
 				url: "https://gitee.com/CuteLeaf/Firefly",
 				external: true,
 				icon: "fa7-brands:gitee",
 			},
 			{
 				name: "QQ交流群",
-				url: "https://qm.qq.com/q/ZGsFa8qX2G",
+				url: "https://qm.qq.com/q/cy9kvbV7Hi",
 				external: true,
 				icon: "fa7-brands:qq",
 			},
