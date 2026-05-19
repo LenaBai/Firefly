@@ -1,5 +1,6 @@
 ---
 title: "Lena个人介绍"
+image: "/assets/images/140174626_p1.jpg"
 published: 2026-05-19
 description: 简单的自我介绍
 image: ./cover.jpg
