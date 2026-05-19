@@ -11,6 +11,7 @@ export const commentConfig: CommentConfig = {
 		lang: "zh-CN",
 		// 是否启用文章访问量统计功能
 		visitorCount: true,
+		jsUrl: "https://registry.npmmirror.com/twikoo/1.7.9/files/dist/twikoo.min.js",
 	},
 
 	//waline评论系统配置
