@@ -6,8 +6,8 @@ import type { AdConfig } from "../types/config";
 export const adConfig1: AdConfig = {
 	image: {
 		src: "assets/images/cover.avif",
-		alt: "广告横幅",
-		link: "#",
+		alt: "我的爱发电",
+		link: "https://www.ifdian.net/a/Lena_Bai",
 		external: true,
 	},
 
