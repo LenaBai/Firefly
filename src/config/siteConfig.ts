@@ -10,7 +10,7 @@ export const siteConfig: SiteConfig = {
 	title: "Lena",
 
 	// 站点副标题
-	subtitle: "丝柯克大人",
+	subtitle: "蕾娜的个人博客",
 
 	// 站点 URL
 	site_url: "https://Lena520.com",
@@ -22,8 +22,8 @@ export const siteConfig: SiteConfig = {
 	// 站点关键词
 	keywords: [
 		"Lena",
-		"Fuwari",
-		"Astro",
+		"方舟MOD",
+		"方舟化妆品",
 		"ACGN",
 		"博客",
 		"技术博客",
@@ -118,7 +118,7 @@ export const siteConfig: SiteConfig = {
 	// bangumi配置
 	bangumi: {
 		// Bangumi用户ID
-		userId: "1143164",
+		userId: "923116",
 		// 条目类型排序，数组中的类型将按顺序优先展示
 		// 可选值: "anime" | "book" | "music" | "game" | "real" (暂不支持"real"类型)
 		// 未列出的类型将按默认顺序排在后面
