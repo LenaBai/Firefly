@@ -71,8 +71,8 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 				icon: "mingcute:bilibili-line",
 			},
 			{
-				name: "123",
-				url: "https://gitee.com/CuteLeaf/Firefly",
+				name: "curseforge主页",
+				url: "https://www.curseforge.com/members/shina_lena/projects",
 				external: true,
 				icon: "fa7-brands:gitee",
 			},
