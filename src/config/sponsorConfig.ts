@@ -43,7 +43,7 @@ export const sponsorConfig: SponsorConfig = {
 			name: "ko-fi",
 			icon: "simple-icons:kofi",
 			qrCode: "",
-			link: "https://ko-fi.com/cuteleaf",
+			link: "",
 			description: "Buy a Coffee for Firefly",
 			enabled: true,
 		},
@@ -71,6 +71,91 @@ export const sponsorConfig: SponsorConfig = {
 			name: "匿名用户",
 			amount: "感谢支持",
 			date: "2025-10-01",
+		},
+		{
+			name: "旦那さん",
+			amount: "感谢支持",
+			date: "2026-05-14",
+		},
+		{
+			name: "瑹",
+			amount: "感谢支持",
+			date: "2026-05-17",
+		},
+		{
+			name: "lost-",
+			amount: "感谢支持",
+			date: "2026-04-30",
+		},
+		{
+			name: "月忻",
+			amount: "感谢支持",
+			date: "2026-04-09",
+		},
+		{
+			name: "扑朔迷离",
+			amount: "感谢支持",
+			date: "2026-05-22",
+		},
+		{
+			name: "仙于点威",
+			amount: "感谢支持",
+			date: "2026-05-22",
+		},
+		{
+			name: "石黑英雄红凯",
+			amount: "感谢支持",
+			date: "2026-05-22",
+		},
+		{
+			name: "烤面包机",
+			amount: "感谢支持",
+			date: "2026-05-22",
+		},
+		{
+			name: "琦晓雪",
+			amount: "感谢支持",
+			date: "2026-05-22",
+		},
+		{
+			name: "水月",
+			amount: "感谢支持",
+			date: "2026-05-22",
+		},
+		{
+			name: "♂90%的苏打",
+			amount: "感谢支持",
+			date: "2026-05-22",
+		},
+		{
+			name: "连接酶",
+			amount: "感谢支持",
+			date: "2026-05-22",
+		},
+		{
+			name: "尘",
+			amount: "感谢支持",
+			date: "2026-05-22",
+		},
+		{
+			name: "「CENSORED」",
+			amount: "感谢支持",
+			date: "2026-05-22",
+		},
+		{
+			name: "昔涟",
+			amount: "感谢支持",
+			date: "2026-05-22",
+		},
+		{
+			name: "danten",
+			amount: "感谢支持",
+			date: "2026-05-22",
+		},
+		{
+			name: "寂如夜静如水",
+			amount: "感谢支持",
+			date: "2026-05-22",
 		},
 	],
 };
