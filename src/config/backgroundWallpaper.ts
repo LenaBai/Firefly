@@ -48,15 +48,12 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			"https://tuchuang.lena520.com/file/1779357042129_133265406_p0.jpg",
 			"https://tuchuang.lena520.com/file/1779357022230_132084515_p0.jpg",
 			"https://tuchuang.lena520.com/file/1779356142221_91162144_p0.jpg",
+			"https://tuchuang.lena520.com/random?dir=img&type=img&orientation=auto",
 		],
 		// 移动背景图片（支持单张或多张随机）
 		// mobile: "assets/images/MobileWallpaper/m1.avif",
 		mobile: [
-			"https://tuchuang.lena520.com/file/1779357085406_128001872_p0.png",
-			"https://tuchuang.lena520.com/file/1779357055316_134477460_p0.jpg",
-			"https://tuchuang.lena520.com/file/1779357042129_133265406_p0.jpg",
-			"https://tuchuang.lena520.com/file/1779357022230_132084515_p0.jpg",
-			"https://tuchuang.lena520.com/file/1779356142221_91162144_p0.jpg",
+			"https://tuchuang.lena520.com/random?dir=img&type=img&orientation=auto",
 		],
 	},
 	// 横幅壁纸和全屏壁纸共享配置
