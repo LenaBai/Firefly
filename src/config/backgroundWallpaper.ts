@@ -52,8 +52,6 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 		// 移动背景图片（支持单张或多张随机）
 		// mobile: "assets/images/MobileWallpaper/m1.avif",
 		mobile: [
-			"assets/images/Skirk2/skirk2_B1.avif",
-			"assets/images/Skirk2/skirk2_B2.avif",
 			"https://tuchuang.lena520.com/file/1779357085406_128001872_p0.png",
 			"https://tuchuang.lena520.com/file/1779357055316_134477460_p0.jpg",
 			"https://tuchuang.lena520.com/file/1779357042129_133265406_p0.jpg",
