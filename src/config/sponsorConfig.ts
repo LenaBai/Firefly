@@ -42,7 +42,7 @@ export const sponsorConfig: SponsorConfig = {
 		{
 			name: "ko-fi",
 			icon: "simple-icons:kofi",
-			qrCode: "",
+			qrCode: "https://ko-fi.com/shinalena",
 			link: "",
 			description: "Buy a Coffee for Firefly",
 			enabled: true,
