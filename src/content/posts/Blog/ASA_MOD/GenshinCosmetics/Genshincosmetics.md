@@ -18,6 +18,9 @@ draft: false
 
 ---
 
+<iframe src="https://player.bilibili.com/player.html?bvid=BV18x6gB2Erb&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 100%; height: 450px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);"></iframe>
+
+
 #### 此MOD由Lena和所有赞助者共同制作
 
 ## 模组核心特点

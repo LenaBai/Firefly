@@ -7,6 +7,7 @@ tags: [ASA, MOD]
 category: 方舟模组
 draft: false
 ---
+<iframe src="https://player.bilibili.com/player.html?bvid=BV1DuztBtE7w&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 100%; height: 450px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);"></iframe>
 
 # 【模组全指引】方舟生存飞升“二次元化”：蕾娜系列动漫化妆品（Cosmetics）模组详解与关系说明
 
@@ -48,7 +49,7 @@ draft: false
 
 * **模组 ID**：`1440586`
 * **当前状态**：收录特定角色皮肤
-* **CurseForge 主页链接**：👉 [AnimeSeason2_CosmeticsDLC 模组主页](https://www.curseforge.com/ark-survival-ascended/mods/animeseason2_cosmeticsdlc)
+* **CurseForge 主页链接**：👉 [AnimeSeason2_CosmeticsDLC 模组主页](https://www.curseforge.com/ark-survival-ascended/mods/animeseason2-cosmeticsdlc)
 * **核心内容**：
   - 特别收录：**碧蓝航线 - 信浓（优雅礼服系列，共 6 种不同款式风格）**
 * **特点**：主打更为精细的角色服饰动态。物理效果在原有的基础上进行了进一步的细节优化，在不同的天气与光影下，礼服的材质与阴影表现均较为自然。
@@ -59,7 +60,7 @@ draft: false
 
 * **模组 ID**：`1181961`
 * **当前状态**：**已停止内容更新**（建议新玩家优先订阅《Anime cosmetics》）
-* **CurseForge 主页链接**：👉 [Lena Free clothing mod 模组主页](https://www.curseforge.com/ark-survival-ascended/mods/lena-free-clothing-mod)
+* **CurseForge 主页链接**：👉 [Lena Free clothing mod 模组主页](https://www.curseforge.com/ark-survival-ascended/mods/lena-colthes)
 * **历史功绩**：作为我的第一款大型衣服模组，它曾收录了许多早期的原神、星穹铁道以及经典的初音未来等主题皮肤，并首次尝试在 ASA 骨骼上还原独特的飘带与衣物物理效果。为了保证旧存档的兼容性，该模组将继续保留在工作坊。
 
 ---
