@@ -97,9 +97,8 @@ draft: false
 ## 我的其他模组作品
 
 除了上述三款模组外，我还制作了其他一些不同题材的二次元/美化模组，如果你感兴趣，也可以前往 CurseForge 主页了解更多：
-- 👉 [Genshin_Cosmetics 原神化妆品模组主页](https://www.curseforge.com/ark-survival-ascended/mods/genshin_cosmetics)
-- 👉 [StrinovaCosmetics_Lena 卡拉彼丘主题皮肤模组主页](https://www.curseforge.com/ark-survival-ascended/mods/strinovacosmetics_lena)
-- 👉 [Lena_mingchao 鸣潮角色主题皮肤模组主页](https://www.curseforge.com/ark-survival-ascended/mods/lena_mingchao)
+- 👉 [Genshin_Cosmetics 原神化妆品模组主页](https://www.curseforge.com/ark-survival-ascended/mods/genshin-cosmetics)
+- 👉 [StrinovaCosmetics_Lena 卡拉彼丘主题皮肤模组主页](https://www.curseforge.com/ark-survival-ascended/mods/strinovacosmetics-lena)
 
 ---
 
