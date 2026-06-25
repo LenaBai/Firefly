@@ -79,10 +79,11 @@ export type SiteConfig = {
 	outdatedThreshold?: number; // 文章过期阈值（天数），超过此天数才显示"上次编辑"卡片
 	sharePoster?: boolean; // 是否显示分享海报按钮
 
-	// 页面开关配置
+		// 页面开关配置
 	pages: {
 		friends: boolean; // 友链页面开关
 		sponsor: boolean; // 赞助页面开关
+		crowdfunding?: boolean; // 众筹页面开关
 		guestbook: boolean; // 留言板页面开关
 		bangumi: boolean;
 		gallery: boolean; // 相册页面开关
@@ -231,6 +232,7 @@ export type CommentConfig = {
 		region?: string;
 		lang?: string;
 		visitorCount?: boolean;
+		jsUrl?: string;
 	};
 	waline?: {
 		serverURL: string;
@@ -743,6 +745,14 @@ export type SponsorConfig = {
 		note?: string; // 进度说明
 		updatedAt?: string; // 更新时间
 	};
+	usage?: string; // 赞助用途说明
+	methods: SponsorMethod[]; // 赞助方式列表
+	sponsors?: SponsorItem[]; // 赞助者列表（可选）
+	showSponsorsList?: boolean; // 是否显示赞助者列表，默认 true
+	showComment?: boolean; // 是否显示评论区，默认 false
+	showButtonInPost?: boolean; // 是否在文章详情页底部显示赞助按钮，默认 true
+};
+
 // 响应式图像布局类型
 export type ResponsiveImageLayout = "constrained" | "full-width" | "none";
 
