@@ -1,4 +1,4 @@
-import type { SponsorConfig } from "../types/config";
+﻿import type { SponsorConfig } from "../types/config";
 
 export const sponsorConfig: SponsorConfig = {
 	// 页面标题，如果留空则使用 i18n 中的翻译
@@ -7,6 +7,16 @@ export const sponsorConfig: SponsorConfig = {
 	// 页面描述文本，如果留空则使用 i18n 中的翻译
 	description: "",
 
+	// 众筹进度
+	crowdfunding: {
+		label: "众筹进度",
+		current: 12800,
+		target: 20000,
+		currency: "元",
+		note: "用于服务器维护、内容创作和功能开发",
+		updatedAt: "2026-06-26",
+	},
+
 	// 赞助用途说明
 	usage:
 		"您的赞助将用于服务器维护、内容创作和功能开发，帮助我持续提供优质内容。",
@@ -14,7 +24,7 @@ export const sponsorConfig: SponsorConfig = {
 	// 是否显示赞助者列表
 	showSponsorsList: true,
 
-	// 是否显示评论区，需要先在commentConfig.ts启用评论系统
+	// 是否显示评论区，需先在commentConfig.ts中启用评论系统
 	showComment: true,
 
 	// 是否在文章详情页底部显示赞助按钮
@@ -25,7 +35,7 @@ export const sponsorConfig: SponsorConfig = {
 		{
 			name: "支付宝",
 			icon: "fa7-brands:alipay",
-			// 收款码图片路径（需要放在 public 目录下）
+			// 收款码图片路径（需要放在public目录下）
 			qrCode: "/assets/images/sponsor/alipay2.png",
 			link: "",
 			description: "使用 支付宝 扫码赞助",
@@ -65,20 +75,18 @@ export const sponsorConfig: SponsorConfig = {
 			amount: "感谢支持",
 			date: "2026-05-19",
 		},
-
-		// 示例：匿名赞助者
 		{
 			name: "匿名用户",
 			amount: "感谢支持",
 			date: "2025-10-01",
 		},
 		{
-			name: "旦那さん",
+			name: "旦那曙曙",
 			amount: "感谢支持",
 			date: "2026-05-14",
 		},
 		{
-			name: "瑹",
+			name: "琦",
 			amount: "感谢支持",
 			date: "2026-05-17",
 		},
@@ -88,7 +96,7 @@ export const sponsorConfig: SponsorConfig = {
 			date: "2026-04-30",
 		},
 		{
-			name: "月忻",
+			name: "月翻",
 			amount: "感谢支持",
 			date: "2026-04-09",
 		},
@@ -113,7 +121,7 @@ export const sponsorConfig: SponsorConfig = {
 			date: "2026-05-22",
 		},
 		{
-			name: "琦晓雪",
+			name: "琪晓雪",
 			amount: "感谢支持",
 			date: "2026-05-22",
 		},
@@ -123,27 +131,27 @@ export const sponsorConfig: SponsorConfig = {
 			date: "2026-05-22",
 		},
 		{
-			name: "♂90%的苏打",
+			name: "☾20%的苏拉",
 			amount: "感谢支持",
 			date: "2026-05-22",
 		},
 		{
-			name: "连接酶",
+			name: "链接雀",
 			amount: "感谢支持",
 			date: "2026-05-22",
 		},
 		{
-			name: "尘",
+			name: "尹",
 			amount: "感谢支持",
 			date: "2026-05-22",
 		},
 		{
-			name: "「CENSORED」",
+			name: "《CENSORED》",
 			amount: "感谢支持",
 			date: "2026-05-22",
 		},
 		{
-			name: "昔涟",
+			name: "昔漓",
 			amount: "感谢支持",
 			date: "2026-05-22",
 		},

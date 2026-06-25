@@ -245,6 +245,15 @@ export const zh_TW: Translation = {
 	[Key.scanToSponsor]: "掃碼贊助",
 	[Key.sponsorGoTo]: "前往贊助",
 	[Key.sponsorButton]: "支持與分享",
+	[Key.crowdfunding]: "眾籌物品",
+	[Key.crowdfundingTitle]: "眾籌物品",
+	[Key.crowdfundingDescription]: "清楚展示目前正在眾籌的物品、圖片與進度。",
+	[Key.crowdfundingItem]: "眾籌物品",
+	[Key.crowdfundingProgress]: "進度",
+	[Key.crowdfundingTarget]: "目標",
+	[Key.crowdfundingCurrent]: "已籌",
+	[Key.crowdfundingRemaining]: "剩餘",
+	[Key.crowdfundingUpdatedAt]: "更新於",
 	[Key.sponsorButtonText]:
 		"如果這篇文章對你有幫助，歡迎分享給更多人或贊助支持！",
 

@@ -51,6 +51,9 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 			// 根据配置决定是否添加赞助，在siteConfig关闭pages.sponsor时导航栏不显示赞助
 			...(siteConfig.pages.sponsor ? [LinkPreset.Sponsor] : []),
 
+			// 根据配置决定是否添加众筹物品页，在siteConfig关闭pages.crowdfunding时导航栏不显示众筹
+			...(siteConfig.pages.crowdfunding ? [LinkPreset.Crowdfunding] : []),
+
 			// 关于页面
 			LinkPreset.About,
 		],

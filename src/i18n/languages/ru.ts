@@ -252,6 +252,15 @@ export const ru: Translation = {
 	[Key.scanToSponsor]: "Сканировать для поддержки",
 	[Key.sponsorGoTo]: "Перейти к спонсору",
 	[Key.sponsorButton]: "Поддержка и Поделиться",
+	[Key.crowdfunding]: "Сбор средств",
+	[Key.crowdfundingTitle]: "Собираемая вещь",
+	[Key.crowdfundingDescription]: "Показывает, что сейчас собирается, с изображениями и прогрессом.",
+	[Key.crowdfundingItem]: "Текущий предмет",
+	[Key.crowdfundingProgress]: "Прогресс",
+	[Key.crowdfundingTarget]: "Цель",
+	[Key.crowdfundingCurrent]: "Собрано",
+	[Key.crowdfundingRemaining]: "Осталось",
+	[Key.crowdfundingUpdatedAt]: "Обновлено",
 	[Key.sponsorButtonText]:
 		"Если эта статья помогла вам, пожалуйста, поделитесь или поддержите!",
 

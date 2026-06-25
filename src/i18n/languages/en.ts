@@ -251,6 +251,15 @@ export const en: Translation = {
 	[Key.scanToSponsor]: "Scan to Sponsor",
 	[Key.sponsorGoTo]: "Go to Sponsor",
 	[Key.sponsorButton]: "Support & Share",
+	[Key.crowdfunding]: "Crowdfunding",
+	[Key.crowdfundingTitle]: "Crowdfunding Item",
+	[Key.crowdfundingDescription]: "See what is being funded right now and how close it is to the goal.",
+	[Key.crowdfundingItem]: "Current item",
+	[Key.crowdfundingProgress]: "Progress",
+	[Key.crowdfundingTarget]: "Goal",
+	[Key.crowdfundingCurrent]: "Raised",
+	[Key.crowdfundingRemaining]: "Remaining",
+	[Key.crowdfundingUpdatedAt]: "Updated at",
 	[Key.sponsorButtonText]:
 		"If this article helped you, please share or support!",
 

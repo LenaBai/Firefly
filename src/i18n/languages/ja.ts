@@ -250,6 +250,15 @@ export const ja: Translation = {
 	[Key.scanToSponsor]: "スキャンしてスポンサー",
 	[Key.sponsorGoTo]: "スポンサーへ",
 	[Key.sponsorButton]: "サポートと共有",
+	[Key.crowdfunding]: "クラウドファンディング",
+	[Key.crowdfundingTitle]: "クラウドファンディング対象",
+	[Key.crowdfundingDescription]: "現在支援中の物品、画像、進捗をわかりやすく表示します。",
+	[Key.crowdfundingItem]: "対象アイテム",
+	[Key.crowdfundingProgress]: "進捗",
+	[Key.crowdfundingTarget]: "目標",
+	[Key.crowdfundingCurrent]: "集まった金額",
+	[Key.crowdfundingRemaining]: "残り",
+	[Key.crowdfundingUpdatedAt]: "更新日",
 	[Key.sponsorButtonText]:
 		"この記事が役に立ったなら、共有またはサポートをお願いします！",
 

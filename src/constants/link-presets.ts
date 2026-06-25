@@ -28,6 +28,11 @@ export const LinkPresets: { [key in LinkPreset]: NavBarLink } = {
 		url: "/sponsor/",
 		icon: "material-symbols:favorite",
 	},
+	[LinkPreset.Crowdfunding]: {
+		name: i18n(I18nKey.crowdfunding),
+		url: "/crowdfunding/",
+		icon: "material-symbols:inventory-2",
+	},
 	[LinkPreset.Guestbook]: {
 		name: i18n(I18nKey.guestbook),
 		url: "/guestbook/",

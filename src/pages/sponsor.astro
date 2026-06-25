@@ -24,6 +24,13 @@ const description =
 const enabledMethods = sponsorConfig.methods.filter((method) => method.enabled);
 const sponsors = sponsorConfig.sponsors || [];
 const showSponsorsList = sponsorConfig.showSponsorsList !== false;
+const crowdfunding = sponsorConfig.crowdfunding;
+const crowdfundingProgress = crowdfunding
+	? Math.min(100, Math.round((crowdfunding.current / crowdfunding.target) * 100))
+	: 0;
+const crowdfundingLeft = crowdfunding
+	? Math.max(crowdfunding.target - crowdfunding.current, 0)
+	: 0;
 ---
 
 <MainGridLayout title={title} description={description}>
@@ -43,6 +50,36 @@ const showSponsorsList = sponsorConfig.showSponsorsList !== false;
           <p class="text-base text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4">
             {description}
           </p>
+        )}
+        {crowdfunding && (
+          <div class="mb-8 rounded-xl border border-(--line-divider) bg-neutral-50/80 dark:bg-neutral-900/40 p-5 crowdfunding-box">
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+              <div>
+                <div class="text-sm font-medium text-neutral-500 dark:text-neutral-400">{crowdfunding.label || "众筹进度"}</div>
+                <div class="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mt-1">
+                  {crowdfunding.currency || ""}{crowdfunding.current.toLocaleString()} / {crowdfunding.currency || ""}{crowdfunding.target.toLocaleString()}
+                </div>
+              </div>
+              <div class="text-right">
+                <div class="text-3xl font-black text-(--primary)">{crowdfundingProgress}%</div>
+                <div class="text-xs text-neutral-400 dark:text-neutral-500">{crowdfunding.note || ""}</div>
+              </div>
+            </div>
+            <div class="h-3 rounded-full bg-neutral-200 dark:bg-neutral-800 overflow-hidden">
+              <div
+                class="h-full rounded-full crowdfunding-bar"
+                style={`width: ${crowdfundingProgress}%;`}
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow={crowdfundingProgress}
+                role="progressbar"
+              />
+            </div>
+            <div class="mt-3 flex items-center justify-between text-xs text-neutral-500 dark:text-neutral-400">
+              <span>剩余 {crowdfunding.currency || ""}{crowdfundingLeft.toLocaleString()}</span>
+              {crowdfunding.updatedAt && <span>更新于 {crowdfunding.updatedAt}</span>}
+            </div>
+          </div>
         )}
         {sponsorConfig.usage && (
           <div class="mb-8 p-4 rounded-lg bg-(--primary)/8 dark:bg-(--btn-regular-bg) border border-(--primary)/30 dark:border-none backdrop-blur-xs shadow-xs usage-info-box">
