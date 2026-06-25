@@ -743,21 +743,6 @@ export type SponsorConfig = {
 		note?: string; // 进度说明
 		updatedAt?: string; // 更新时间
 	};
-	usage?: string; // 赞助用途说明
-	methods: SponsorMethod[]; // 赞助方式列表
-	sponsors?: SponsorItem[]; // 赞助者列表（可选）
-	showSponsorsList?: boolean; // 是否显示赞助者列表，默认 true
-	showComment?: boolean; // 是否显示评论区，默认 false
-	showButtonInPost?: boolean; // 是否在文章详情页底部显示赞助按钮，默认 true
-};
-	usage?: string; // 赞助用途说明
-	methods: SponsorMethod[]; // 赞助方式列表
-	sponsors?: SponsorItem[]; // 赞助者列表（可选）
-	showSponsorsList?: boolean; // 是否显示赞助者列表，默认 true
-	showComment?: boolean; // 是否显示评论区，默认 false
-	showButtonInPost?: boolean; // 是否在文章详情页底部显示赞助按钮，默认 true
-};
-
 // 响应式图像布局类型
 export type ResponsiveImageLayout = "constrained" | "full-width" | "none";
 
