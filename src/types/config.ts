@@ -733,18 +733,6 @@ export type SponsorItem = {
 export type SponsorConfig = {
 	title?: string; // 页面标题，默认使用 i18n
 	description?: string; // 页面描述文本
-	crowdfunding?: {
-		label?: string; // 众筹进度标题
-		itemName?: string; // 当前众筹物品名称
-		itemDescription?: string; // 物品说明
-		itemImage?: string; // 物品图片路径或 URL
-		itemGallery?: string[]; // 物品图片组
-		current: number; // 当前已筹金额
-		target: number; // 目标金额
-		currency?: string; // 金额单位
-		note?: string; // 进度说明
-		updatedAt?: string; // 更新时间
-	};
 	usage?: string; // 赞助用途说明
 	methods: SponsorMethod[]; // 赞助方式列表
 	sponsors?: SponsorItem[]; // 赞助者列表（可选）
@@ -776,4 +764,21 @@ export type GalleryAlbum = {
 export type GalleryConfig = {
 	albums: GalleryAlbum[];
 	columnWidth?: number; // 瀑布流最小列宽(px)，默认 240，浏览器根据容器宽度自动计算列数
+};
+
+export type CrowdfundingItem = {
+	label?: string;
+	itemName: string;
+	itemDescription?: string;
+	itemImage?: string;
+	itemGallery?: string[];
+	current: number;
+	target: number;
+	currency?: string;
+	note?: string;
+	updatedAt?: string;
+};
+
+export type CrowdfundingConfig = {
+	items: CrowdfundingItem[];
 };

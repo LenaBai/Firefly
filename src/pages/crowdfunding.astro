@@ -1,6 +1,6 @@
 ﻿---
 import { Icon } from "astro-icon/components";
-import { siteConfig, sponsorConfig } from "@/config";
+import { crowdfundingConfig, siteConfig } from "@/config";
 import I18nKey from "@/i18n/i18nKey";
 import { i18n } from "@/i18n/translation";
 import MainGridLayout from "@/layouts/MainGridLayout.astro";
@@ -9,88 +9,94 @@ if (!siteConfig.pages.crowdfunding) {
 	return Astro.redirect("/404/");
 }
 
-const crowdfunding = sponsorConfig.crowdfunding;
-if (!crowdfunding) {
+const items = crowdfundingConfig.items ?? [];
+if (!items.length) {
 	return Astro.redirect("/sponsor/");
 }
 
-const progress = Math.min(100, Math.round((crowdfunding.current / crowdfunding.target) * 100));
-const remaining = Math.max(crowdfunding.target - crowdfunding.current, 0);
-const gallery = crowdfunding.itemGallery?.length
-	? crowdfunding.itemGallery
-	: crowdfunding.itemImage
-		? [crowdfunding.itemImage]
-		: [];
 const title = i18n(I18nKey.crowdfundingTitle);
 const description = i18n(I18nKey.crowdfundingDescription);
 ---
 
 <MainGridLayout title={title} description={description}>
-  <div class="flex w-full rounded-(--radius-large) overflow-hidden relative">
-    <div class="card-base z-10 px-9 py-6 relative w-full">
-      <div class="mb-8">
-        <div class="flex items-center gap-3 mb-3">
-          <div class="h-8 w-8 rounded-lg bg-(--primary) flex items-center justify-center text-white dark:text-black/70">
-            <Icon name="material-symbols:inventory-2" class="text-[1.5rem]" />
-          </div>
-          <div>
-            <div class="text-3xl font-bold text-neutral-900 dark:text-neutral-100">{title}</div>
-            <div class="text-sm text-neutral-500 dark:text-neutral-400 mt-1">{crowdfunding.label || i18n(I18nKey.crowdfundingItem)}</div>
-          </div>
-        </div>
-        <p class="text-base text-neutral-600 dark:text-neutral-400 leading-relaxed">{description}</p>
-      </div>
+	<div class="card-base w-full px-6 py-6 md:px-9 md:py-8">
+		<div class="mb-8">
+			<div class="flex items-center gap-3 mb-3">
+				<div class="h-8 w-8 rounded-lg bg-(--primary) flex items-center justify-center text-white dark:text-black/70">
+					<Icon name="material-symbols:inventory-2" class="text-[1.5rem]" />
+				</div>
+				<div>
+					<div class="text-3xl font-bold text-neutral-900 dark:text-neutral-100">{title}</div>
+					<div class="text-sm text-neutral-500 dark:text-neutral-400 mt-1">{description}</div>
+				</div>
+			</div>
+		</div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-6 items-start">
-        <section class="space-y-4">
-          <div class="rounded-xl overflow-hidden border border-(--line-divider) bg-neutral-100 dark:bg-neutral-900/40">
-            <img src={gallery[0]} alt={crowdfunding.itemName || title} class="w-full aspect-[16/10] object-cover" loading="eager" />
-          </div>
-          {gallery.length > 1 && (
-            <div class="grid grid-cols-3 gap-3">
-              {gallery.slice(1).map((src) => (
-                <div class="rounded-lg overflow-hidden border border-(--line-divider) bg-neutral-100 dark:bg-neutral-900/40">
-                  <img src={src} alt={crowdfunding.itemName || title} class="w-full aspect-square object-cover" loading="lazy" />
-                </div>
-              ))}
-            </div>
-          )}
-        </section>
+		<div class="grid gap-6">
+			{items.map((item) => {
+				const progress = item.target > 0 ? Math.min(100, Math.round((item.current / item.target) * 100)) : 0;
+				const remaining = Math.max(item.target - item.current, 0);
+				const gallery = item.itemGallery?.length ? item.itemGallery : item.itemImage ? [item.itemImage] : [];
 
-        <aside class="space-y-4">
-          <div class="rounded-xl border border-(--line-divider) bg-neutral-50 dark:bg-neutral-900/40 p-5">
-            <div class="text-sm text-neutral-500 dark:text-neutral-400 mb-2">{i18n(I18nKey.crowdfundingItem)}</div>
-            <div class="text-2xl font-bold text-neutral-900 dark:text-neutral-100">{crowdfunding.itemName || title}</div>
-            <p class="mt-3 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">{crowdfunding.itemDescription || crowdfunding.note}</p>
-          </div>
+				return (
+					<section class="rounded-2xl border border-(--line-divider) bg-neutral-50 dark:bg-neutral-900/40 overflow-hidden">
+						<div class="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-0">
+							<div class="p-4 md:p-5 space-y-3">
+								<div class="rounded-xl overflow-hidden border border-(--line-divider) bg-neutral-100 dark:bg-neutral-900/40">
+									{gallery[0] ? (
+										<img src={gallery[0]} alt={item.itemName} class="w-full aspect-[16/10] object-cover" loading="eager" />
+									) : (
+										<div class="aspect-[16/10] flex items-center justify-center text-neutral-400 dark:text-neutral-600 text-sm">暂无图片</div>
+									)}
+								</div>
+								{gallery.length > 1 && (
+									<div class="grid grid-cols-3 gap-3">
+										{gallery.slice(1).map((src) => (
+											<div class="rounded-lg overflow-hidden border border-(--line-divider) bg-neutral-100 dark:bg-neutral-900/40">
+												<img src={src} alt={item.itemName} class="w-full aspect-square object-cover" loading="lazy" />
+											</div>
+										))}
+									</div>
+								)}
+							</div>
 
-          <div class="rounded-xl border border-(--line-divider) bg-neutral-50 dark:bg-neutral-900/40 p-5">
-            <div class="flex items-end justify-between gap-4 mb-3">
-              <div>
-                <div class="text-sm text-neutral-500 dark:text-neutral-400">{i18n(I18nKey.crowdfundingProgress)}</div>
-                <div class="text-3xl font-black text-(--primary)">{progress}%</div>
-              </div>
-              <div class="text-right text-sm text-neutral-500 dark:text-neutral-400">
-                <div>{i18n(I18nKey.crowdfundingCurrent)} {crowdfunding.currency || ""}{crowdfunding.current.toLocaleString()}</div>
-                <div>{i18n(I18nKey.crowdfundingTarget)} {crowdfunding.currency || ""}{crowdfunding.target.toLocaleString()}</div>
-              </div>
-            </div>
-            <div class="h-3 rounded-full bg-neutral-200 dark:bg-neutral-800 overflow-hidden">
-              <div class="h-full rounded-full crowdfunding-bar" style={`width: ${progress}%;`} role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow={progress} />
-            </div>
-            <div class="mt-3 text-xs text-neutral-500 dark:text-neutral-400 flex items-center justify-between gap-3">
-              <span>{i18n(I18nKey.crowdfundingRemaining)} {crowdfunding.currency || ""}{remaining.toLocaleString()}</span>
-              {crowdfunding.updatedAt && <span>{i18n(I18nKey.crowdfundingUpdatedAt)} {crowdfunding.updatedAt}</span>}
-            </div>
-          </div>
-        </aside>
-      </div>
-    </div>
-  </div>
+							<div class="p-4 md:p-5 space-y-4">
+								<div>
+									<div class="text-sm text-neutral-500 dark:text-neutral-400 mb-2">{item.label || i18n(I18nKey.crowdfundingItem)}</div>
+									<div class="text-2xl font-bold text-neutral-900 dark:text-neutral-100">{item.itemName}</div>
+									<p class="mt-3 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">{item.itemDescription || item.note}</p>
+								</div>
+
+								<div>
+									<div class="flex items-end justify-between gap-4 mb-3">
+										<div>
+											<div class="text-sm text-neutral-500 dark:text-neutral-400">{i18n(I18nKey.crowdfundingProgress)}</div>
+											<div class="text-3xl font-black text-(--primary)">{progress}%</div>
+										</div>
+										<div class="text-right text-sm text-neutral-500 dark:text-neutral-400">
+											<div>{i18n(I18nKey.crowdfundingCurrent)} {item.currency || ""}{item.current.toLocaleString()}</div>
+											<div>{i18n(I18nKey.crowdfundingTarget)} {item.currency || ""}{item.target.toLocaleString()}</div>
+										</div>
+									</div>
+									<div class="h-3 rounded-full bg-neutral-200 dark:bg-neutral-800 overflow-hidden">
+										<div class="h-full rounded-full crowdfunding-bar" style={`width: ${progress}%;`} role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow={progress} />
+									</div>
+									<div class="mt-3 text-xs text-neutral-500 dark:text-neutral-400 flex flex-wrap items-center justify-between gap-3">
+										<span>{i18n(I18nKey.crowdfundingRemaining)} {item.currency || ""}{remaining.toLocaleString()}</span>
+										{item.updatedAt && <span>{i18n(I18nKey.crowdfundingUpdatedAt)} {item.updatedAt}</span>}
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				);
+			})}
+		</div>
+	</div>
 </MainGridLayout>
 
 <style>
-  .crowdfunding-bar {
-    background: linear-gradient(90deg, var(--primary), color-mix(in oklab, var(--primary) 65%, white));
-  }
+	.crowdfunding-bar {
+		background: linear-gradient(90deg, var(--primary), color-mix(in oklab, var(--primary) 65%, white));
+	}
 </style>
