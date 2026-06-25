@@ -1,4 +1,4 @@
-import {
+﻿import {
 	LinkPreset,
 	type NavBarConfig,
 	type NavBarLink,
@@ -11,7 +11,7 @@ import { siteConfig } from "./siteConfig";
 const getDynamicNavBarConfig = (): NavBarConfig => {
 	// 基础导航栏链接
 	const links: (NavBarLink | LinkPreset)[] = [
-		// 主页
+		// 首页
 		LinkPreset.Home,
 
 		// 归档
@@ -48,24 +48,16 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 		url: "/content/",
 		icon: "material-symbols:info",
 		children: [
-			// 根据配置决定是否添加赞助，在siteConfig关闭pages.sponsor时导航栏不显示赞助
-			...(siteConfig.pages.sponsor ? [LinkPreset.Sponsor] : []),
-
-			// 根据配置决定是否添加众筹物品页，在siteConfig关闭pages.crowdfunding时导航栏不显示众筹
-			...(siteConfig.pages.crowdfunding ? [LinkPreset.Crowdfunding] : []),
-
 			// 关于页面
 			LinkPreset.About,
 		],
 	});
 
-	// 自定义导航栏链接,并且支持多级菜单
+	// 链接菜单
 	links.push({
 		name: "链接",
 		url: "/links/",
 		icon: "material-symbols:link",
-
-		// 子菜单
 		children: [
 			{
 				name: "BiliBili",
@@ -88,7 +80,16 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 		],
 	});
 
-	// 仅返回链接，其它导航搜索相关配置在模块顶层常量中独立导出
+	// 根据配置决定是否添加众筹物品页，在绔欓《显示为蓝色按钮
+	if (siteConfig.pages.crowdfunding) {
+		links.push(LinkPreset.Crowdfunding);
+	}
+
+	// 根据配置决定是否添加赞助，在绔欓《显示为红色按钮
+	if (siteConfig.pages.sponsor) {
+		links.push(LinkPreset.Sponsor);
+	}
+
 	return { links } as NavBarConfig;
 };
 
